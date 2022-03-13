@@ -1,0 +1,17 @@
+// ===============================================
+// PAGE NOT FOUND 404
+// ===============================================
+
+.page-not-found {
+ height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ background-color: #FFD3D3;
+
+ &__wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+ }
+}
