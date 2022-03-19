@@ -1,0 +1,14 @@
+// ===============================================
+// COMMON PROJECT STYLES
+// ===============================================
+
+
+html {
+ box-sizing: border-box;
+}
+
+body {
+ background-color: var(--body-bg-cl);
+ line-height: var(--body-lh);
+ text-rendering: optimizeLegibility;
+}

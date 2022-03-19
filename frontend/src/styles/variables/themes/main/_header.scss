@@ -1,6 +1,7 @@
 // ===============================================
-// PROJECT PAGES
+// HEADER VARIABLES
 // ===============================================
 
-@import "pages/home-page";
-@import "pages/page-not-found";
+:root {
+ --header-default-h: 72px;
+}

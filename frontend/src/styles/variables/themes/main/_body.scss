@@ -1,6 +1,9 @@
 // ===============================================
-// PROJECT PAGES
+// BODY VARIABLES
 // ===============================================
 
-@import "pages/home-page";
-@import "pages/page-not-found";
+
+:root {
+ --body-bg-cl: var(--cl-black);
+ --body-lh: 1.5;
+}

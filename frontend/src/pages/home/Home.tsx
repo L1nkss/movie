@@ -1,7 +1,9 @@
+import Header from "../../components/header/Header";
+
 const Home = () => {
-    return <>
-        <h1>hello world 2</h1>
-    </>
+    return <div className="app-container">
+        <Header />
+    </div>
 }
 
 export default Home;

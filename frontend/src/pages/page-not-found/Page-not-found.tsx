@@ -1,6 +1,7 @@
 import {RefObject, useEffect, useRef} from "react";
 import gsap from "gsap";
 import {Link} from "react-router-dom";
+import Button from "../../components/button/Button";
 
 const PageNotFound = () => {
     const leftEye = useRef<SVGPathElement>(null);
@@ -31,7 +32,7 @@ const PageNotFound = () => {
     return (
         <div className="page-not-found">
             <div className="page-not-found__wrapper">
-                <h1>404</h1>
+                <h1 className="page-not-found__header">404</h1>
                 <svg width="300" height="490" viewBox="0 0 300 490" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="Group">
                         <g id="right-eye">
@@ -58,7 +59,9 @@ const PageNotFound = () => {
                         <path id="Vector_16" d="M225.2 489.9C205.7 489.9 186.3 484.6 167.4 479.4L155.3 476.1C139.8 472 123.7 467.8 108.1 466.9C98.2 466.3 89.4 467.2 81.2 469.7C79.5 470.2 78.1 470.7 76.8 471.2L73.7 472.4L73.6 469.1C72.2 431.8 77.9 393.6 90.1 358.4C94.3 346.1 98.6 336.8 103.5 328.9C106.4 324.3 109.5 320.3 112.8 316.7C125 303.6 141.3 296.7 156.3 298.4C172.4 300.3 187.4 311.4 200.8 331.6C202 333.4 203.2 335.2 204.3 337.1C231.4 381.6 244.3 434.7 240.8 486.7L240.7 488.6L238.8 488.9C235.5 489.4 231.8 489.7 227.6 489.7C226.8 489.9 226 489.9 225.2 489.9ZM102.5 462.2C104.4 462.2 106.4 462.3 108.4 462.4C124.5 463.2 140.8 467.5 156.6 471.7L168.8 475C188.1 480.3 208 485.7 227.6 485.3C230.8 485.2 233.7 485 236.4 484.7C239.4 434.3 226.7 382.9 200.5 339.7C199.4 337.9 198.3 336.2 197.1 334.4C184.5 315.4 170.6 304.9 156 303.2C142.4 301.7 127.6 307.9 116.4 320C113.3 323.4 110.4 327.1 107.7 331.5C103 339.1 98.9 348.1 94.8 360C83.2 393.6 77.5 430.1 78.5 465.8C79 465.6 79.6 465.4 80.2 465.3C86.9 463.2 94.3 462.2 102.5 462.2Z" fill="#333333"/>
                     </g>
                 </svg>
-                <Link to="/">go home</Link>
+                <Link to="/">
+                    <Button>Go home</Button>
+                </Link>
             </div>
         </div>
     )

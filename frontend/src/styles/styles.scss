@@ -2,12 +2,17 @@
 // PROJECT TEMPLATE
 // ===============================================
 
+// Project variables
+@import 'variables';
 
 // Reboot default styles
 @import 'reboot';
 
 // Mixins
 @import 'mixins';
+
+// Collect variables into root
+@import 'root';
 
 // Components
 @import 'components';
