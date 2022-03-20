@@ -1,15 +1,32 @@
-import {FC, useState} from "react";
+import {FC, useEffect, useState} from "react";
 import FilmCard from "../film-card/FilmCard";
 import FilmDetails from "../film-details/FilmDetails";
+import useQuery from "../../utils/hooks/useQuery";
+import {RowProps} from "./Row.interface";
+import {createSearchParams, useNavigate, useSearchParams} from "react-router-dom";
 
-const Row: FC = () => {
+const Row: FC<RowProps> = ({films}) => {
     const [activeFilm, setActiveFilm] = useState<number>();
-    const films = [{id: 1, isActive: true}, {id: 2}, {id: 3}, {id: 4}, {id: 5}]
+    const [searchParams, setSearchParams] = useSearchParams();
+    const navigate = useNavigate();
+    const getQuery = useQuery();
+
+    useEffect(() => {
+        const queryId = searchParams.get("id");
+
+        const isFilmContainsInRow = films.some((film) => film.id === Number(queryId));
+        if (!isFilmContainsInRow) {
+            setActiveFilm(0);
+        }
+    }, [searchParams])
+
     const filmCardClickHandle = (id: number) => {
+        setSearchParams(`id=${id}`)
         setActiveFilm(id);
     }
 
     const closeCardDetails = () => {
+        getQuery.delete("id")
         setActiveFilm(0);
     }
 
