@@ -12,3 +12,9 @@ body {
  line-height: var(--body-lh);
  text-rendering: optimizeLegibility;
 }
+
+img {
+ width: 100%;
+ height: auto;
+ display: block;
+}

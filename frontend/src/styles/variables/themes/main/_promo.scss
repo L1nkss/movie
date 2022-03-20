@@ -1,9 +1,7 @@
 // ===============================================
-// MAIN THEME
+// PROMO VARIABLES
 // ===============================================
 
-
-@import "main/header";
-@import "main/colors";
-@import "main/body";
-@import "main/promo";
+:root {
+ --promo-film-default-h: 85vh
+}

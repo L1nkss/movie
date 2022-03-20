@@ -1,9 +1,8 @@
 // ===============================================
-// MAIN THEME
+// HEADER
 // ===============================================
 
 
-@import "main/header";
-@import "main/colors";
-@import "main/body";
-@import "main/promo";
+.promo-film {
+ height: var(--promo-film-default-h);
+}

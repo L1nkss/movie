@@ -1,14 +1,17 @@
-import {useEffect, useState} from "react";
+import {FunctionComponent, useEffect, useState} from "react";
 import {listenerOff, listenerOn} from "../listeners";
 
-const useScrollingUp = () => {
+const useScrollingUp = (): [boolean, boolean] => {
     let prevScroll: number = 0;
     const [scrollingUp, setScrollingUp] = useState<boolean>(true);
+    const [isPositionTop, setIsPositionTop] = useState<boolean>(true);
     const handleScroll = () => {
         const currScroll = window.pageYOffset;
         const isScrolled = prevScroll >= currScroll;
+        const isPositionTop = currScroll === 0;
 
         setScrollingUp(isScrolled);
+        setIsPositionTop(isPositionTop)
         prevScroll = currScroll;
     }
 
@@ -22,7 +25,7 @@ const useScrollingUp = () => {
         }
     }, [])
 
-    return scrollingUp;
+    return [scrollingUp, isPositionTop];
 }
 
 export default useScrollingUp;
