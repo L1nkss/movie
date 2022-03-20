@@ -4,5 +4,20 @@
 
 
 .film-details {
+ width: 100%;
+ position: relative;
 
+ &__background {
+  width: var(--background-width);
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+ }
+
+ &__image {
+  background-repeat: no-repeat;
+  height: 100%;
+  background-size: cover;
+ }
 }
