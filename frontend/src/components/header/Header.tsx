@@ -17,7 +17,6 @@ const Header: FunctionComponent<HeaderProps> = ({className}) => {
 
     return (
         <header className={`${headerClassName} ${isScrollUp ? 'header--show' : ''}`}>
-            <div>header</div>
         </header>
     )
 }
