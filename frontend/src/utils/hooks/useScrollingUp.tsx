@@ -3,20 +3,22 @@ import {listenerOff, listenerOn} from "../listeners";
 
 const useScrollingUp = () => {
     let prevScroll: number = 0;
-    const [scrollingUp, setScrollingUp] = useState<boolean>(false);
+    const [scrollingUp, setScrollingUp] = useState<boolean>(true);
     const handleScroll = () => {
         const currScroll = window.pageYOffset;
-        const isScrolled = prevScroll > currScroll;
+        const isScrolled = prevScroll >= currScroll;
 
         setScrollingUp(isScrolled);
         prevScroll = currScroll;
     }
 
     useEffect(() => {
-        listenerOn(window, 'scroll', handleScroll);
+        listenerOn(document, 'scroll', handleScroll);
+
+        prevScroll = window.pageYOffset;
 
         return () => {
-            listenerOff(window, 'scroll', handleScroll);
+            listenerOff(document, 'scroll', handleScroll);
         }
     }, [])
 
