@@ -11,7 +11,8 @@
  $cl: (
      black: #000000,
      white: #FFFFFF,
-     black-10: #1f1f1f
+     black-10: #1f1f1f,
+     green-10: #00BB66
  );
 
  @include get-colors($cl);

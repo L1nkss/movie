@@ -1,0 +1,61 @@
+// ===============================================
+// FILM CARD STYLES
+// ===============================================
+
+.film-card {
+ position: relative;
+ z-index: 1;
+ border: 2px solid transparent;
+
+ &::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  background-color: var(--cl-white);
+  position: absolute;
+  bottom: 7px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  border-radius: 2px;
+  z-index: -1;
+ }
+
+ &__rating {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+ }
+
+ &--active {
+  border-color: var(--cl-white);
+  border-radius: 4px;
+  @include transition(border .75s);
+
+  &::before {
+   bottom: -7px;
+   @include transition(bottom .4s);
+  }
+ }
+}
+
+.test {
+ position: absolute;
+ border: 2px solid var(--cl-white);
+ border-radius: 4px;
+ width: 100%;
+ height: 100%;
+ transition: all 5s;
+
+ &::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: var(--cl-white);
+  bottom: -7px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  border-radius: 2px;
+  z-index: -1;
+ }
+}

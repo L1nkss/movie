@@ -1,0 +1,20 @@
+// ===============================================
+// ROW STYLES
+// ===============================================
+
+
+.row {
+ &__films-container {
+  display: flex;
+  column-gap: 35px;
+ }
+
+ &__details {
+  min-height: 0;
+  transition: min-height .75s;
+
+  &--expanded {
+   min-height: var(--row-details-min-h);
+  }
+ }
+}
