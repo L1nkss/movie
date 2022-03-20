@@ -40,7 +40,7 @@ const Row: FC<RowProps> = ({films}) => {
             </div>
             {/*  Контейнер для информации о фильме  */}
             <div className={`row__details ${activeFilm ? "row__details--expanded" : ""}`}>
-                {activeFilm && <FilmDetails close={closeCardDetails} />}
+                {Boolean(activeFilm) && <FilmDetails close={closeCardDetails} />}
             </div>
         </div>
     )

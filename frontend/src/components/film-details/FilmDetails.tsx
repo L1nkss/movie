@@ -5,7 +5,6 @@ import {FilmDetailsProps} from "./FilmDetails.interface";
 const FilmDetails: FC<FilmDetailsProps> = ({close}) => {
     return (
         <div className="film-details">
-            <h2 />
             {close && <button onClick={close}>Закрыть</button>}
         </div>
     )
