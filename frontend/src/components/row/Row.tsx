@@ -13,8 +13,8 @@ const Row: FC<RowProps> = ({films}) => {
 
     useEffect(() => {
         const queryId = searchParams.get("id");
-
         const isFilmContainsInRow = films.some((film) => film.id === Number(queryId));
+
         if (!isFilmContainsInRow) {
             setActiveFilm(0);
         }
@@ -26,7 +26,7 @@ const Row: FC<RowProps> = ({films}) => {
     }
 
     const closeCardDetails = () => {
-        getQuery.delete("id")
+        setSearchParams({});
         setActiveFilm(0);
     }
 

@@ -6,6 +6,7 @@
  position: relative;
  z-index: 1;
  border: 2px solid transparent;
+ @include transition(border .75s);
 
  &::before {
   content: "";
@@ -29,7 +30,7 @@
  &--active {
   border-color: var(--cl-white);
   border-radius: 4px;
-  @include transition(border .75s);
+
 
   &::before {
    bottom: -7px;
