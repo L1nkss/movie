@@ -4,6 +4,10 @@
 
 
 .row {
+ &:not(:last-child) {
+  margin-bottom: 26px;
+ }
+
  &__films-container {
   display: flex;
   column-gap: 35px;
@@ -13,13 +17,14 @@
   display: flex;
   min-height: 0;
   background-color: transparent;
-  transition: min-height .75s;
-  margin-top: 36px;
+  transition: min-height 1s .30s;
 
   &--expanded {
    min-height: var(--row-details-min-h);
    max-height: var(--row-details-min-h);
    background-color: var(--cl-black);
+   margin-top: 16px;
+   transition: min-height .75s;
   }
  }
 }

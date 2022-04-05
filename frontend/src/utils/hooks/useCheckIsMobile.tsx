@@ -7,7 +7,7 @@ const useCheckIsMobile = () => {
 
     useEffect(() => {
         const handleResize = () => {
-            setIsMobile(window.innerWidth < Breakpoints.lg);
+            setIsMobile(window.innerWidth < Breakpoints.sm);
         }
 
         listenerOn(window, "resize", handleResize);
