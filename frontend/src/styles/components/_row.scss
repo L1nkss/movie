@@ -14,6 +14,7 @@
   min-height: 0;
   background-color: transparent;
   transition: min-height .75s;
+  margin-top: 36px;
 
   &--expanded {
    min-height: var(--row-details-min-h);

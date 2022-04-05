@@ -7,7 +7,6 @@
  z-index: 1;
  border: 2px solid transparent;
  border-radius: 4px;
- overflow: hidden;
  @include transition(border .75s, transform .4s ease);
 
  &::before {
@@ -36,10 +35,9 @@
  &--active {
   border-color: var(--cl-white);
 
-
   &::before {
    bottom: -7px;
-   @include transition(bottom .4s);
+   @include transition(bottom .4s .25s);
   }
  }
 }

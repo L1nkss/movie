@@ -1,4 +1,5 @@
 export interface FilmCardProps {
     onClickHandler?: () => void,
-    isActive: boolean
+    isActive: boolean,
+    showRating?: boolean
 }

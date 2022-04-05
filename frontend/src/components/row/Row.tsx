@@ -1,15 +1,12 @@
 import {FC, useEffect, useState} from "react";
 import FilmCard from "../film-card/FilmCard";
 import FilmDetails from "../film-details/FilmDetails";
-import useQuery from "../../utils/hooks/useQuery";
 import {RowProps} from "./Row.interface";
-import {createSearchParams, useNavigate, useSearchParams} from "react-router-dom";
+import {useSearchParams} from "react-router-dom";
 
 const Row: FC<RowProps> = ({films}) => {
     const [activeFilm, setActiveFilm] = useState<number>();
     const [searchParams, setSearchParams] = useSearchParams();
-    const navigate = useNavigate();
-    const getQuery = useQuery();
 
     useEffect(() => {
         const queryId = searchParams.get("id");
