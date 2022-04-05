@@ -4,7 +4,6 @@ import Row from "../../components/row/Row";
 import {FC, useState} from "react";
 
 const Home: FC = () => {
-    const [filmCountInRow, setFilmCountInRow] = useState(5);
     const films = [
         {id: 1},
         {id: 2},
@@ -26,9 +25,9 @@ const Home: FC = () => {
         <Header />
         <Promo className="app-container__promo-block" />
         <div className="content-container">
-            <Row films={films.slice(0, 5)} />
-            <Row films={films.slice(5, 10)} />
-            <Row films={films.slice(10, 15)} />
+            <Row films={films} />
+            <Row films={films} />
+            <Row films={films} />
         </div>
     </div>
 }
