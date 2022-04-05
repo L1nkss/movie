@@ -1,0 +1,25 @@
+// ===============================================
+// HEADER
+// ===============================================
+
+
+.header {
+ position: fixed;
+ top:0;
+ left:0;
+ width: 100%;
+ min-height: var(--header-default-h);
+ background-color: var(--header-bg-cl);
+ border-bottom: 1px solid var(--ca-white-80);
+ transform: translateY(calc(-1 * var(--header-default-h)));
+ z-index: 100;
+ @include transition(transform .75s, background-color .75s);
+
+ &--show {
+  transform: translateY(0);
+ }
+
+ &--top {
+  background-color: transparent;
+ }
+}

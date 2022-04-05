@@ -1,0 +1,12 @@
+// ===============================================
+// PAGE HOME
+// ===============================================
+
+.app-container {
+ height: 1500px;
+ background-color: var(--cl-black-10);
+
+ &__promo-block {
+  margin-bottom: 36px;
+ }
+}
