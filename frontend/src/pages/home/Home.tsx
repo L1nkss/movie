@@ -1,8 +1,9 @@
 import Header from "../../components/header/Header";
 import Promo from "../../components/promo/Promo";
 import Row from "../../components/row/Row";
+import {FC, useState} from "react";
 
-const Home = () => {
+const Home: FC = () => {
     const films = [
         {id: 1},
         {id: 2},
@@ -24,11 +25,9 @@ const Home = () => {
         <Header />
         <Promo className="app-container__promo-block" />
         <div className="content-container">
-            <Row films={films.slice(0, 5)} />
-            <div style={{marginBottom: '25px'}}/>
-            <Row films={films.slice(5, 10)} />
-            <div style={{marginBottom: '25px'}}/>
-            <Row films={films.slice(10, 15)} />
+            <Row films={films} />
+            <Row films={films} />
+            <Row films={films} />
         </div>
     </div>
 }
